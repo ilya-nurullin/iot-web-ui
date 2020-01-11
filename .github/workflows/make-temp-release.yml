@@ -25,12 +25,12 @@ jobs:
     - name: Archive Release
       uses: thedoctor0/zip-release@master
       with:
-        filename: "release-${{ GITHUB_REF }}.zip"
+        filename: "release-${{ github.ref }}.zip"
         exclusions: '*.git* /*node_modules/* .editorconfig'
     - name: Create release
       uses: ncipollo/release-action@v1
       with:
-        artifact: "release-${{ GITHUB_REF }}.zip"
+        artifact: "release-${{ github.ref }}.zip"
         allowUpdates: true
         prerelease: true
         artifactContentType: "application/zip"
