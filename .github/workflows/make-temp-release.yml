@@ -1,0 +1,47 @@
+name: Make Release
+
+on: 
+  push:
+    tags:
+    - '*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [11.x]
+    steps:
+    - uses: actions/checkout@v1
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - name: npm install, build, and test
+      run: |
+        npm ci
+        npm run build
+      env:
+        CI: true
+        
+  make_zip:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: Archive Release
+      uses: thedoctor0/zip-release@master
+      with:
+        filename: "release-$GITHUB_REF.zip"
+        exclusions: '*.git* /*node_modules/* .editorconfig'
+
+  create_artifact_and_release: 
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - uses: ncipollo/release-action@v1
+      with:
+        artifact: "release-$GITHUB_REF.zip"
+        allowUpdates: true
+        prerelease: true
+        artifactContentType: "application/zip"
+        token: ${{ secrets.GITHUB_TOKEN }}
