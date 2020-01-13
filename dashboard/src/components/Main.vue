@@ -1,6 +1,7 @@
 <template lang="pug">
-  scenario-list.scenario-list
-    
+  div
+    h1(align='center') Сценарии
+    scenario-list.scenario-list
 </template>
 
 <script>
@@ -19,7 +20,7 @@
 <style lang="scss" scoped>
   .scenario-list {
     display: flex;
-    width: 50%;
-    margin: 0 auto;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 </style>
