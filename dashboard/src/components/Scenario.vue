@@ -3,14 +3,21 @@
     p ID = {{ scenario.id }}
     p Name = {{ scenario.name }}
     p 
-      | Code = 
-      code {{ scenario.id }}
-    p Is Enabled = {{ scenario.isEnabled }}
+      | Is Enabled =
+      switcher(@change="changeStatus")
 </template>
 
 <script>
   export default {
-    props: ['scenario']
+    props: ['scenario'],
+    components: {
+      'switcher': require('./Slider.vue').default
+    },
+    methods: {
+      changeStatus(checked) {
+        axios.get(routes.changeStatus(this.scenario.name, checked));
+      },
+    }
   }
 </script>
 
@@ -20,5 +27,6 @@
     border-radius: 10px;
     width: 100%;
     margin: 1rem 0;
+    padding: 1rem;
   }
 </style>

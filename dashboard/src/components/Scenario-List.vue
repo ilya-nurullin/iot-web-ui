@@ -12,6 +12,9 @@
     },
     components: {
       'scenario': require('./Scenario.vue').default
+    },
+    created() {
+      axios.get(routes.allScripts).then(response => this.scenarios = response.data);
     }
   }
 </script>

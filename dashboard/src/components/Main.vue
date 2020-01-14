@@ -1,5 +1,7 @@
 <template lang="pug">
-  scenario-list.scenario-list
+  div
+    h1.text-center Панель управления сценариями
+    scenario-list.scenario-list
     
 </template>
 
@@ -11,7 +13,6 @@
     },
     components: {
       'scenario-list': require('./Scenario-List.vue').default,
-      
     }
   }
 </script>
