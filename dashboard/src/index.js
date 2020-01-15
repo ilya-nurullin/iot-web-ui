@@ -9,8 +9,8 @@ window.env = {
 };
 
 window.routes = {
-  'allScripts': env.serverAddress + '/scripts/all',
-  changeStatus: (scriptName, status) => env.serverAddress + '/script/change_status/'+scriptName+'/'+status,
+  'allScripts': env.serverAddress + '/script/all',
+  changeStatus: (scriptId, status) => env.serverAddress + '/script/change_status/'+scriptId+'/'+status,
 }
 
 window.app = new Vue({

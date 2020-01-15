@@ -7,7 +7,7 @@
   export default {
     data() {
       return {
-        'scenarios': [{'id': '123', 'name': 'sName', 'code': 'asdasdas', 'isEnabled': true}]
+        'scenarios': []
       };
     },
     components: {

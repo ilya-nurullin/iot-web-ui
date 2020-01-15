@@ -6,11 +6,7 @@
 
 <script>
   export default {
-    props: {
-      'propChecked': {
-        'default': false
-      }
-    },
+    props: ['propChecked'],
     data() {
       return {
         'checked': this.propChecked

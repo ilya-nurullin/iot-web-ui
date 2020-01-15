@@ -1,10 +1,10 @@
 <template lang="pug">
   .scenario
-    p ID = {{ scenario.id }}
-    p Name = {{ scenario.name }}
+    p ID = {{ scenario.script_id }}
+    p Name = {{ scenario.script_title }}
     p 
       | Is Enabled =
-      switcher(@change="changeStatus")
+      switcher(@change="changeStatus", :propChecked="scenario.is_enabled")
 </template>
 
 <script>
@@ -15,7 +15,7 @@
     },
     methods: {
       changeStatus(checked) {
-        axios.get(routes.changeStatus(this.scenario.name, checked));
+        axios.get(routes.changeStatus(this.scenario.script_id, checked));
       },
     }
   }
