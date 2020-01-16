@@ -1,0 +1,3 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="door" id="Tcp/Pa%fR,6oJcHkWa;O" x="89" y="86"></block>
+</xml>
