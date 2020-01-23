@@ -181,7 +181,7 @@
 			var code = Blockly.Python.workspaceToCode(workspace);
 			console.log(code);
 			//var server = prompt("Please enter server IP:", "localhost");
-			var server = "0.0.0.0:8999";
+			var server = "localhost:8999";
 			var script_name = prompt("Please enter script name:", "script");
 			if (confirm("Confirm sending!")) {
 				var xhr = new XMLHttpRequest();
@@ -193,7 +193,7 @@
 				xhr.onload = function(){
 					if (xhr.readyState === 4) {
 						if (xhr.status === 200){
-							alert('Сценарий '+script_name+' успешно отправлен');
+							alert('Script '+script_name+' was sended');
 						}else{
 							alert(xhr.statusText+'\n'+xhr.responseText);
 						}
@@ -207,13 +207,14 @@
 				var request = {
 					name: script_name,
 					xmlCode: Blockly.Xml.domToPrettyText(xml),
-					pyCode: code,
+                    pyCode: code,
+                    is_enabled: false,
 				};
 				var json = JSON.stringify(request);
 				console.log(json);
 				xhr.send(json);
 			} else {
-			txt = "You hui!";
+			txt = "Canceled";
 			}
 			//alert(code);
 			//alert(server);
