@@ -7,7 +7,7 @@
   export default {
     data() {
       return {
-        'scenarios': []
+        'scenarios': [{'script_id': 13, 'script_title': 'My script', is_enabled: true}, {'script_id': 13, 'script_title': 'My script', is_enabled: true},{'script_id': 13, 'script_title': 'My script', is_enabled: true},,{'script_id': 13, 'script_title': 'My script', is_enabled: true},,{'script_id': 13, 'script_title': 'My script', is_enabled: true},,{'script_id': 13, 'script_title': 'My script', is_enabled: true},,{'script_id': 13, 'script_title': 'My script', is_enabled: true},,{'script_id': 13, 'script_title': 'My script', is_enabled: true},,{'script_id': 13, 'script_title': 'My script', is_enabled: true},,{'script_id': 13, 'script_title': 'My script', is_enabled: true},,{'script_id': 13, 'script_title': 'My script', is_enabled: true},,{'script_id': 13, 'script_title': 'My script', is_enabled: true},,{'script_id': 13, 'script_title': 'My script', is_enabled: true},]
       };
     },
     components: {
