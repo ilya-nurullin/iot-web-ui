@@ -1,0 +1,17 @@
+{
+  "scenarios": [
+    {"script_id": 13, "script_title": "My script", "is_enabled": true}, 
+    {"script_id": 14, "script_title": "My script", "is_enabled": true},
+    {"script_id": 15, "script_title": "My script", "is_enabled": true},
+    {"script_id": 28, "script_title": "My script", "is_enabled": true},
+    {"script_id": 165, "script_title": "My script", "is_enabled": true},
+    {"script_id": 4567, "script_title": "My script", "is_enabled": true},
+    {"script_id": 44, "script_title": "My script", "is_enabled": true},
+    {"script_id": 456, "script_title": "My script", "is_enabled": true},
+    {"script_id": 87, "script_title": "My script", "is_enabled": true},
+    {"script_id": 780, "script_title": "My script", "is_enabled": true},
+    {"script_id": 23, "script_title": "My script", "is_enabled": true},
+    {"script_id": 4, "script_title": "My script", "is_enabled": true},
+    {"script_id": 345, "script_title": "My script", "is_enabled": true}
+  ]
+}

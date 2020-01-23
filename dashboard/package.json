@@ -4,7 +4,8 @@
   "description": "",
   "scripts": {
     "build": "webpack",
-    "watch": "webpack --watch"
+    "watch": "webpack --watch",
+    "fake-server": "json-server --watch data.json --port 8999 --id script_id"
   },
   "author": "",
   "license": "ISC",
@@ -16,6 +17,7 @@
     "@babel/core": "^7.7.7",
     "babel-loader": "^8.0.6",
     "css-loader": "^3.4.2",
+    "json-server": "^0.15.1",
     "node-sass": "^4.13.0",
     "pug": "^2.0.4",
     "pug-plain-loader": "^1.0.0",
