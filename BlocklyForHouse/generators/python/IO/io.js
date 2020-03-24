@@ -8,6 +8,6 @@ Blockly.Python['input'] = function(block) {
   Blockly.Python['output'] = function(block) {
     var query = Blockly.Python.valueToCode(block, 'query', Blockly.Python.ORDER_ATOMIC);
     var json = Blockly.Python.valueToCode(block, 'json', Blockly.Python.ORDER_ATOMIC);
-    var code = `mqttc.publish(${query}, ${json})`;
+    var code = `mqttc.publish(${query}, ${json})\n`;
     return code;
   };
