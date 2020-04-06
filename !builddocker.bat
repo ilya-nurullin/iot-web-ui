@@ -1,0 +1,1 @@
+docker build --rm . -t iot-web-ui:latest
