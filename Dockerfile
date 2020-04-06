@@ -1,4 +1,4 @@
-FROM node:13.1.0-alpine3.11 AS build-dashboard
+FROM node:13.12.0-alpine3.11 AS build-dashboard
 COPY ./dashboard /dashboard
 WORKDIR /dashboard
 RUN npm install
